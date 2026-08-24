@@ -52,11 +52,21 @@ New-Item -ItemType Directory -Force ".cursor\rules" | Out-Null
 Copy-Item "adapters\cursor\language-logic.mdc" ".cursor\rules\language-logic.mdc"
 ```
 
+```bash
+mkdir -p .cursor/rules
+cp adapters/cursor/language-logic.mdc .cursor/rules/language-logic.mdc
+```
+
 ### 项目级 Skill
 
 ```powershell
 New-Item -ItemType Directory -Force ".cursor\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" ".cursor\skills\language-output-design"
+```
+
+```bash
+mkdir -p .cursor/skills
+cp -R skills/language-output-design .cursor/skills/language-output-design
 ```
 
 需要在所有项目中使用时，将 Rule 内容添加到 Cursor Settings 的 User Rules，并将 Skill 复制到 `~/.cursor/skills/language-output-design/`。
@@ -73,11 +83,22 @@ New-Item -ItemType Directory -Force ".agents\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" ".agents\skills\language-output-design"
 ```
 
+```bash
+cp adapters/codex/AGENTS.md AGENTS.md
+mkdir -p .agents/skills
+cp -R skills/language-output-design .agents/skills/language-output-design
+```
+
 用户级安装位置如下。
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" "$HOME\.agents\skills\language-output-design"
+```
+
+```bash
+mkdir -p "$HOME/.agents/skills"
+cp -R skills/language-output-design "$HOME/.agents/skills/language-output-design"
 ```
 
 需要全局启用 Rule 时，将 `adapters/codex/AGENTS.md` 的内容合并到 `~/.codex/AGENTS.md`。不要直接覆盖已有个人指令。
@@ -94,11 +115,22 @@ New-Item -ItemType Directory -Force ".claude\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" ".claude\skills\language-output-design"
 ```
 
+```bash
+cp adapters/claude-code/CLAUDE.md CLAUDE.md
+mkdir -p .claude/skills
+cp -R skills/language-output-design .claude/skills/language-output-design
+```
+
 用户级安装位置如下。
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" "$HOME\.claude\skills\language-output-design"
+```
+
+```bash
+mkdir -p "$HOME/.claude/skills"
+cp -R skills/language-output-design "$HOME/.claude/skills/language-output-design"
 ```
 
 需要全局启用 Rule 时，将 `adapters/claude-code/CLAUDE.md` 的内容合并到 `~/.claude/CLAUDE.md`。不要直接覆盖已有个人指令。
