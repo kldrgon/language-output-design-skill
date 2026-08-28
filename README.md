@@ -24,6 +24,10 @@ Skill 只细化 Rule，不覆盖或削弱 Rule。当前工具不支持 Skill 时
 │   └── language-output-design/
 │       ├── SKILL.md
 │       └── references/
+│           ├── foundations/
+│           ├── composition/
+│           ├── scenarios/
+│           └── examples/
 └── adapters/
     ├── cursor/
     │   └── language-logic.mdc
@@ -47,10 +51,14 @@ Skill 只细化 Rule，不覆盖或削弱 Rule。当前工具不支持 Skill 时
 
 将 `adapters/cursor/language-logic.mdc` 复制到项目的 `.cursor/rules/`。
 
+**PowerShell**
+
 ```powershell
 New-Item -ItemType Directory -Force ".cursor\rules" | Out-Null
 Copy-Item "adapters\cursor\language-logic.mdc" ".cursor\rules\language-logic.mdc"
 ```
+
+**Bash**
 
 ```bash
 mkdir -p .cursor/rules
@@ -59,42 +67,84 @@ cp adapters/cursor/language-logic.mdc .cursor/rules/language-logic.mdc
 
 ### 项目级 Skill
 
+**PowerShell**
+
 ```powershell
 New-Item -ItemType Directory -Force ".cursor\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" ".cursor\skills\language-output-design"
 ```
+
+**Bash**
 
 ```bash
 mkdir -p .cursor/skills
 cp -R skills/language-output-design .cursor/skills/language-output-design
 ```
 
+### 用户级安装
+
 需要在所有项目中使用时，将 Rule 内容添加到 Cursor Settings 的 User Rules，并将 Skill 复制到 `~/.cursor/skills/language-output-design/`。
+
+**PowerShell**
+
+```powershell
+New-Item -ItemType Directory -Force "$HOME\.cursor\skills" | Out-Null
+Copy-Item -Recurse "skills\language-output-design" "$HOME\.cursor\skills\language-output-design"
+```
+
+**Bash**
+
+```bash
+mkdir -p "$HOME/.cursor/skills"
+cp -R skills/language-output-design "$HOME/.cursor/skills/language-output-design"
+```
 
 ## 安装到 Codex
 
 Codex 使用 `AGENTS.md` 加载持久指令，并从 `.agents/skills/` 发现项目 Skill。
 
+### 项目级 Rule
+
 将 `adapters/codex/AGENTS.md` 的内容合并到项目根目录的 `AGENTS.md`。如果项目没有该文件，可以直接复制。
+
+**PowerShell**
 
 ```powershell
 Copy-Item "adapters\codex\AGENTS.md" "AGENTS.md"
+```
+
+**Bash**
+
+```bash
+cp adapters/codex/AGENTS.md AGENTS.md
+```
+
+### 项目级 Skill
+
+**PowerShell**
+
+```powershell
 New-Item -ItemType Directory -Force ".agents\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" ".agents\skills\language-output-design"
 ```
 
+**Bash**
+
 ```bash
-cp adapters/codex/AGENTS.md AGENTS.md
 mkdir -p .agents/skills
 cp -R skills/language-output-design .agents/skills/language-output-design
 ```
 
-用户级安装位置如下。
+### 用户级安装
+
+**PowerShell**
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.agents\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" "$HOME\.agents\skills\language-output-design"
 ```
+
+**Bash**
 
 ```bash
 mkdir -p "$HOME/.agents/skills"
@@ -107,26 +157,48 @@ cp -R skills/language-output-design "$HOME/.agents/skills/language-output-design
 
 Claude Code 使用 `CLAUDE.md` 加载持久指令，并从 `.claude/skills/` 发现项目 Skill。
 
+### 项目级 Rule
+
 将 `adapters/claude-code/CLAUDE.md` 的内容合并到项目根目录的 `CLAUDE.md`。如果项目没有该文件，可以直接复制。
+
+**PowerShell**
 
 ```powershell
 Copy-Item "adapters\claude-code\CLAUDE.md" "CLAUDE.md"
+```
+
+**Bash**
+
+```bash
+cp adapters/claude-code/CLAUDE.md CLAUDE.md
+```
+
+### 项目级 Skill
+
+**PowerShell**
+
+```powershell
 New-Item -ItemType Directory -Force ".claude\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" ".claude\skills\language-output-design"
 ```
 
+**Bash**
+
 ```bash
-cp adapters/claude-code/CLAUDE.md CLAUDE.md
 mkdir -p .claude/skills
 cp -R skills/language-output-design .claude/skills/language-output-design
 ```
 
-用户级安装位置如下。
+### 用户级安装
+
+**PowerShell**
 
 ```powershell
 New-Item -ItemType Directory -Force "$HOME\.claude\skills" | Out-Null
 Copy-Item -Recurse "skills\language-output-design" "$HOME\.claude\skills\language-output-design"
 ```
+
+**Bash**
 
 ```bash
 mkdir -p "$HOME/.claude/skills"
