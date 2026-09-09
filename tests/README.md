@@ -39,3 +39,6 @@
 | [prompts/06-reference.md](prompts/06-reference.md) | 查阅类内容是否便于定位和比较 |
 | [prompts/07-rewriting.md](prompts/07-rewriting.md) | 改写是否去掉空泛模式并保住有效信息 |
 | [prompts/08-table-comparison.md](prompts/08-table-comparison.md) | 共同维度的数值比较是否使用表格，并说明差异含义 |
+| [prompts/09-mixed-genres.md](prompts/09-mixed-genres.md) | 同一主题下文章、口语、通知是否分开且语体匹配 |
+| [prompts/10-open-topic-set.md](prompts/10-open-topic-set.md) | 开放主题是否按教学、对话、操作分别组织 |
+| [prompts/11-spoken-and-written.md](prompts/11-spoken-and-written.md) | 书面稿与口播、问答的信息和语体是否一致且可区分 |
