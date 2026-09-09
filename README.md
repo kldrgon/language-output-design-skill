@@ -28,6 +28,9 @@ Skill 只细化 Rule，不覆盖或削弱 Rule。当前工具不支持 Skill 时
 │           ├── composition/
 │           ├── scenarios/
 │           └── examples/
+├── tests/
+│   ├── README.md
+│   └── prompts/
 └── adapters/
     ├── cursor/
     │   └── language-logic.mdc
@@ -221,6 +224,8 @@ Rule 适用于所有交流。以下任务应按需调用 Skill。
 - 实验效果、参数和规格比较
 
 Skill 的主文件会根据任务将 Agent 引导到最少的必要资料。不要预读整个 `references/` 目录。
+
+装载后的输出质量用 `tests/` 做人工评测：把 `tests/prompts/` 中的输入发给已装载该 Skill 的 Agent，再阅读产出文本。具体步骤见 [tests/README.md](tests/README.md)。
 
 ## 设计原则
 
