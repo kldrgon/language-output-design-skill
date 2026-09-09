@@ -17,11 +17,15 @@
 - 事实、推断、不确定性和验证见 [diagnostics/evidence-and-uncertainty.md](diagnostics/evidence-and-uncertainty.md)
 - 条件分支、取舍和推荐见 [decisions/conditions-and-tradeoffs.md](decisions/conditions-and-tradeoffs.md)
 
+## 听众关系
+
+- 否定预期、关联范围和指令活动预设见 [grounding/listener-relations.md](grounding/listener-relations.md)
+
 ## 改写
 
 - 段落主线和支线恢复见 [rewriting/discourse-flow.md](rewriting/discourse-flow.md)
 - 对话、文档和警告的语体调整见 [rewriting/register.md](rewriting/register.md)
-- 否定式对比、空泛总结、假结构和其他 AI 模式见 [rewriting/ai-patterns.md](rewriting/ai-patterns.md)
+- 否定式对比、空泛总结、假协商、假结构和其他 AI 模式见 [rewriting/ai-patterns.md](rewriting/ai-patterns.md)
 
 ## 参考内容
 
