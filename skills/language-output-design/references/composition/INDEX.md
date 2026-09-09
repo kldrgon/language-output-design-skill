@@ -5,6 +5,7 @@
 先确认一句话对当前听众是否成立。否定前没有预期、叮嘱只对部分人有用、指令默认听众正在写或补时，先读取 [../foundations/grounding-and-relevance.md](../foundations/grounding-and-relevance.md)，不要先改语体。
 
 - 要选择信息入口或展开顺序时，读取 [entry-and-order.md](entry-and-order.md)
+- 判断和条目的语序跟上文或首次锚点错位、同一概念中途换名、或状态变化埋在隐喻里时，读取 [information-structure.md](information-structure.md)
 - 段落各自通顺但整体跳跃时，读取 [discourse-flow.md](discourse-flow.md)
 - 出现先否定后肯定、过早勘误或装饰性对比时，读取 [corrections-and-contrast.md](corrections-and-contrast.md)
 - 限制和例外的位置会影响结论或操作时，读取 [limits-and-exceptions.md](limits-and-exceptions.md)

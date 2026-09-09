@@ -17,6 +17,10 @@
 - 事实、推断、不确定性和验证见 [diagnostics/evidence-and-uncertainty.md](diagnostics/evidence-and-uncertainty.md)
 - 条件分支、取舍和推荐见 [decisions/conditions-and-tradeoffs.md](decisions/conditions-and-tradeoffs.md)
 
+## 句内结构
+
+- 语序跟上文和首次锚点、名称稳定和谓语里的状态变化见 [information-structure/clause-structure.md](information-structure/clause-structure.md)
+
 ## 听众关系
 
 - 否定预期、关联范围和指令活动预设见 [grounding/listener-relations.md](grounding/listener-relations.md)
