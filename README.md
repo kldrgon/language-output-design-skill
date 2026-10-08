@@ -8,7 +8,7 @@
 
 Rule 保存每次交流都应遵守的通用原则，包括信息入口、主线、表达形式、受众适配、限制前置和输出检查。
 
-Skill 保存教学解释、技术文档、诊断、决策建议、总结和改写等任务需要的详细方法、场景指导和正反例。Agent 先读取 `SKILL.md`，再沿索引按需读取参考文件，避免一次加载全部内容。
+Skill 保存篇章作法、语句作法，以及技术文档的表、图和条目。Agent 先读取 `SKILL.md`，再按问题读取其中一份，避免一次加载全部内容。
 
 Skill 只细化 Rule，不覆盖或削弱 Rule。当前工具不支持 Skill 时，仍可单独使用 Rule。
 
@@ -24,10 +24,9 @@ Skill 只细化 Rule，不覆盖或削弱 Rule。当前工具不支持 Skill 时
 │   └── language-output-design/
 │       ├── SKILL.md
 │       └── references/
-│           ├── foundations/
-│           ├── composition/
-│           ├── scenarios/
-│           └── examples/
+│           ├── discourse.md
+│           ├── wording.md
+│           └── technical-forms.md
 ├── tests/
 │   ├── README.md
 │   └── prompts/
@@ -223,7 +222,7 @@ Rule 适用于所有交流。以下任务应按需调用 Skill。
 - 总结、审阅和语言改写
 - 实验效果、参数和规格比较
 
-Skill 的主文件会根据任务将 Agent 引导到最少的必要资料。不要预读整个 `references/` 目录。
+Skill 的主文件会指出读篇章还是读语句。不要两份一起预读。
 
 装载后的输出质量用 `tests/` 做人工评测：把 `tests/prompts/` 中的输入发给已装载该 Skill 的 Agent，再阅读产出文本。具体步骤见 [tests/README.md](tests/README.md)。
 
